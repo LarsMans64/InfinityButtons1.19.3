@@ -1,5 +1,22 @@
 # Changelog Infinity Buttons
 
+## 3.0.0
+
+- Ported to 1.19.3!
+- Added Andesite, Diorite and Granite Buttons.
+- Added Concrete Powder Buttons. They act the same as Sand Buttons, but cooler looking.
+- Added Lamp Button and Lever.
+- Added an actionbar message when trying to press a Safety Button without sneaking.
+- Secret Buttons now have proper texture rotation on the top face.
+- Stone Buttons are now obtainable from Stonecutters, with a pretty great discount.
+
+Fabric only:
+- Ported to 1.18.2
+- Added compatibility for Nether's Delight and Carpenter (1.18.2)
+
+Forge only:
+- ...
+
 ## 2.2.1
 
 - Fixed an issue causing Safety Buttons being unable to function on Dedicated Servers.

@@ -2,6 +2,7 @@ package net.larsmans.infinitybuttons;
 
 import net.fabricmc.api.ModInitializer;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroups;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import org.slf4j.Logger;
@@ -17,5 +18,6 @@ public class InfinityButtonsInit implements ModInitializer {
 		InfinityButtonsItems.registerModItems();
 		InfinityButtonsBlocks.registerModBlocks();
 		InfinityButtonsSounds.registerSounds();
+		InfinityButtonsItemGroups.loadItemGroup();
 	}
 }

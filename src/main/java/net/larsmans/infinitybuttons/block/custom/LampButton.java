@@ -5,6 +5,8 @@ import net.larsmans.infinitybuttons.block.custom.button.AbstractButton;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
@@ -12,6 +14,8 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldAccess;
+import org.jetbrains.annotations.Nullable;
 
 public class LampButton extends AbstractButton {
     public LampButton(FabricBlockSettings settings) {
@@ -21,6 +25,11 @@ public class LampButton extends AbstractButton {
     @Override
     public int getPressTicks() {
         return 20;
+    }
+
+    @Override
+    protected void playClickSound(@Nullable PlayerEntity player, WorldAccess world, BlockPos pos, boolean pressed) {
+        world.playSound(pressed ? player : null, pos, this.getClickSound(pressed), SoundCategory.BLOCKS, 1f, pressed ? 0.6f : 0.5f);
     }
 
     @Override

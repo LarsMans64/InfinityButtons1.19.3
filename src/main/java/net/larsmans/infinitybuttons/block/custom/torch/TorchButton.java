@@ -82,7 +82,7 @@ public class TorchButton extends TorchBlock {
     public void powerOn(BlockState state, World world, BlockPos pos) {
         world.setBlockState(pos, (BlockState)state.with(PRESSED, true), Block.NOTIFY_ALL);
         this.updateNeighbors(state, world, pos);
-        world.createAndScheduleBlockTick(pos, this, 60);
+        world.scheduleBlockTick(pos, this, 60);
     }
 
     protected void playClickSound(@Nullable PlayerEntity player, WorldAccess world, BlockPos pos, boolean powered) {

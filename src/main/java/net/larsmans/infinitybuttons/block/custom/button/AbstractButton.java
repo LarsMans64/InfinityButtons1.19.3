@@ -108,7 +108,7 @@ public abstract class AbstractButton extends WallMountedBlock {
     public void powerOn(BlockState state, World world, BlockPos pos) {
         world.setBlockState(pos, (BlockState)state.with(PRESSED, true), Block.NOTIFY_ALL);
         this.updateNeighbors(state, world, pos);
-        world.createAndScheduleBlockTick(pos, this, this.getPressTicks());
+        world.scheduleBlockTick(pos, this, this.getPressTicks());
     }
 
     protected void playClickSound(@Nullable PlayerEntity player, WorldAccess world, BlockPos pos, boolean pressed) {
@@ -180,7 +180,7 @@ public abstract class AbstractButton extends WallMountedBlock {
             world.emitGameEvent((Entity)list.stream().findFirst().orElse(null), bl ? GameEvent.BLOCK_ACTIVATE : GameEvent.BLOCK_DEACTIVATE, pos);
         }
         if (bl) {
-            world.createAndScheduleBlockTick(new BlockPos(pos), this, this.getPressTicks());
+            world.scheduleBlockTick(new BlockPos(pos), this, this.getPressTicks());
         }
     }
 

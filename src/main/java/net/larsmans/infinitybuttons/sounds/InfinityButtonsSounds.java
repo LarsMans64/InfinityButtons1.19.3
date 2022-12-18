@@ -1,9 +1,9 @@
 package net.larsmans.infinitybuttons.sounds;
 
-import net.larsmans.infinitybuttons.InfinityButtonsInit;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class InfinityButtonsSounds {
     public static SoundEvent ALARM = registerSoundEvent("alarm");
@@ -12,11 +12,11 @@ public class InfinityButtonsSounds {
     public static SoundEvent DOORBELL = registerSoundEvent("doorbell");
 
     private static SoundEvent registerSoundEvent(String name) {
-        Identifier id = new Identifier(InfinityButtonsInit.MOD_ID, name);
-        return Registry.register(Registry.SOUND_EVENT, id, new SoundEvent(id));
+        Identifier id = new Identifier("infinitybuttons", name);
+        return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 
     public static void registerSounds() {
-        System.out.println("Registering InfinityButtonsSounds for " + InfinityButtonsInit.MOD_ID);
+        System.out.println("Registering Sounds for Infinity Buttons");
     }
 }

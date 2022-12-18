@@ -133,7 +133,7 @@ public class EmergencyButton extends WallMountedBlock {
     public void powerOn(BlockState state, World world, BlockPos pos) {
         world.setBlockState(pos, (BlockState)state.with(PRESSED, true), Block.NOTIFY_ALL);
         this.updateNeighbors(state, world, pos);
-        world.createAndScheduleBlockTick(pos, this, 10);
+        world.scheduleBlockTick(pos, this, 10);
     }
 
     protected void playClickSound(@Nullable PlayerEntity player, WorldAccess world, BlockPos pos, boolean pressed) {
