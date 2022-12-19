@@ -24,11 +24,13 @@ public class InfinityButtonsItemGroups {
                 entries.add(Blocks.CRIMSON_BUTTON);
                 entries.add(Blocks.WARPED_BUTTON);
                 entries.add(Blocks.STONE_BUTTON);
+                entries.add(InfinityButtonsBlocks.DEEPSLATE_BUTTON);
                 entries.add(InfinityButtonsBlocks.GRANITE_BUTTON);
                 entries.add(InfinityButtonsBlocks.DIORITE_BUTTON);
                 entries.add(InfinityButtonsBlocks.ANDESITE_BUTTON);
                 entries.add(InfinityButtonsBlocks.CALCITE_BUTTON);
                 entries.add(InfinityButtonsBlocks.TUFF_BUTTON);
+                entries.add(InfinityButtonsBlocks.DRIPSTONE_BUTTON);
                 entries.add(Blocks.POLISHED_BLACKSTONE_BUTTON);
                 entries.add(InfinityButtonsBlocks.COPPER_BUTTON);
                 entries.add(InfinityButtonsBlocks.EXPOSED_COPPER_BUTTON);
@@ -75,10 +77,12 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.CRIMSON_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.WARPED_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.STONE_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.DEEPSLATE_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.GRANITE_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.DIORITE_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.ANDESITE_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.TUFF_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.DRIPSTONE_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.CALCITE_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.COPPER_LARGE_BUTTON);

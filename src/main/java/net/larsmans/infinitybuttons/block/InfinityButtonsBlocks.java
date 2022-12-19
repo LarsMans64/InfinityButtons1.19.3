@@ -33,11 +33,13 @@ public class InfinityButtonsBlocks {
      * Buttons
      */
 
+    public static final Block DEEPSLATE_BUTTON = registerStoneButton("deepslate");
     public static final Block GRANITE_BUTTON = registerStoneButton("granite");
     public static final Block DIORITE_BUTTON = registerStoneButton("diorite");
     public static final Block ANDESITE_BUTTON = registerStoneButton("andesite");
     public static final Block CALCITE_BUTTON = registerStoneButton("calcite");
     public static final Block TUFF_BUTTON = registerStoneButton("tuff");
+    public static final Block DRIPSTONE_BUTTON = registerStoneButton("dripstone");
 
     public static final Block COPPER_BUTTON = registerCopperButton("");
     public static final Block EXPOSED_COPPER_BUTTON = registerCopperButton("exposed_");
@@ -126,11 +128,13 @@ public class InfinityButtonsBlocks {
     public static final Block CRIMSON_LARGE_BUTTON = registerWoodenLargeButton("crimson");
 
     public static final Block STONE_LARGE_BUTTON = registerStoneLargeButton("stone");
+    public static final Block DEEPSLATE_LARGE_BUTTON = registerStoneLargeButton("deepslate");
     public static final Block GRANITE_LARGE_BUTTON = registerStoneLargeButton("granite");
     public static final Block DIORITE_LARGE_BUTTON = registerStoneLargeButton("diorite");
     public static final Block ANDESITE_LARGE_BUTTON = registerStoneLargeButton("andesite");
     public static final Block CALCITE_LARGE_BUTTON = registerStoneLargeButton("calcite");
     public static final Block TUFF_LARGE_BUTTON = registerStoneLargeButton("tuff");
+    public static final Block DRIPSTONE_LARGE_BUTTON = registerStoneLargeButton("dripstone");
     public static final Block POLISHED_BLACKSTONE_LARGE_BUTTON = registerStoneLargeButton("polished_blackstone");
 
     public static final Block COPPER_LARGE_BUTTON = registerCopperLargeButton("");
