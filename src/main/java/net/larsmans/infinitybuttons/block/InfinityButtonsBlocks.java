@@ -124,8 +124,8 @@ public class InfinityButtonsBlocks {
     public static final Block ACACIA_LARGE_BUTTON = registerWoodenLargeButton("acacia");
     public static final Block DARK_OAK_LARGE_BUTTON = registerWoodenLargeButton("dark_oak");
     public static final Block MANGROVE_LARGE_BUTTON = registerWoodenLargeButton("mangrove");
-    public static final Block CRIMSON_LARGE_BUTTON = registerWoodenLargeButton("crimson");
-    public static final Block WARPED_LARGE_BUTTON = registerWoodenLargeButton("warped");
+    public static final Block CRIMSON_LARGE_BUTTON = registerNetherWoodenLargeButton("crimson");
+    public static final Block WARPED_LARGE_BUTTON = registerNetherWoodenLargeButton("warped");
 
     public static final Block STONE_LARGE_BUTTON = registerStoneLargeButton("stone");
     public static final Block DEEPSLATE_LARGE_BUTTON = registerStoneLargeButton("deepslate");
@@ -183,6 +183,10 @@ public class InfinityButtonsBlocks {
 
     public static Block registerWoodenLargeButton(String name) {
         return registerBlockWithItem(name + "_large_button", new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.WOOD)));
+    }
+
+    public static Block registerNetherWoodenLargeButton(String name) {
+        return registerBlockWithItem(name + "_large_button", new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.NETHER_WOOD)));
     }
 
     public static Block registerStoneLargeButton(String name) {

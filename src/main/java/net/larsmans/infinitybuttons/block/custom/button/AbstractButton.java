@@ -66,7 +66,7 @@ public abstract class AbstractButton extends WallMountedBlock {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction direction = state.get(FACING);
         boolean bl = state.get(PRESSED);
-        switch ((WallMountLocation) state.get(FACE)) {
+        switch (state.get(FACE)) {
             case FLOOR -> {
                 if (direction.getAxis() == Direction.Axis.X) {
                     return bl ? FLOOR_X_PRESSED_SHAPE : FLOOR_X_SHAPE;
@@ -101,18 +101,18 @@ public abstract class AbstractButton extends WallMountedBlock {
         }
         this.powerOn(state, world, pos);
         this.playClickSound(player, world, pos, true);
-        world.emitGameEvent((Entity)player, GameEvent.BLOCK_ACTIVATE, pos);
+        world.emitGameEvent(player, GameEvent.BLOCK_ACTIVATE, pos);
         return ActionResult.success(world.isClient);
     }
 
     public void powerOn(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, (BlockState)state.with(PRESSED, true), Block.NOTIFY_ALL);
+        world.setBlockState(pos, state.with(PRESSED, true), Block.NOTIFY_ALL);
         this.updateNeighbors(state, world, pos);
         world.scheduleBlockTick(pos, this, this.getPressTicks());
     }
 
     protected void playClickSound(@Nullable PlayerEntity player, WorldAccess world, BlockPos pos, boolean pressed) {
-        world.playSound(pressed ? player : null, pos, this.getClickSound(pressed), SoundCategory.BLOCKS, 0.3f, pressed ? 0.6f : 0.5f);
+        world.playSound(pressed ? player : null, pos, this.getClickSound(pressed), SoundCategory.BLOCKS);
     }
 
     protected abstract SoundEvent getClickSound(boolean pressed);
@@ -154,7 +154,7 @@ public abstract class AbstractButton extends WallMountedBlock {
         if (this.projectile) {
             this.tryPowerWithProjectiles(state, world, pos);
         } else {
-            world.setBlockState(pos, (BlockState)state.with(PRESSED, false), Block.NOTIFY_ALL);
+            world.setBlockState(pos, state.with(PRESSED, false), Block.NOTIFY_ALL);
             this.updateNeighbors(state, world, pos);
             this.playClickSound(null, world, pos, false);
             world.emitGameEvent(null, GameEvent.BLOCK_DEACTIVATE, pos);
@@ -170,14 +170,13 @@ public abstract class AbstractButton extends WallMountedBlock {
     }
 
     private void tryPowerWithProjectiles(BlockState state, World world, BlockPos pos) {
-        boolean bl2;
         List<PersistentProjectileEntity> list = world.getNonSpectatingEntities(PersistentProjectileEntity.class, state.getOutlineShape(world, pos).getBoundingBox().offset(pos));
         boolean bl = !list.isEmpty();
-        if (bl != (bl2 = state.get(PRESSED))) {
-            world.setBlockState(pos, (BlockState)state.with(PRESSED, bl), Block.NOTIFY_ALL);
+        if (bl != state.get(PRESSED)) {
+            world.setBlockState(pos, state.with(PRESSED, bl), Block.NOTIFY_ALL);
             this.updateNeighbors(state, world, pos);
             this.playClickSound(null, world, pos, bl);
-            world.emitGameEvent((Entity)list.stream().findFirst().orElse(null), bl ? GameEvent.BLOCK_ACTIVATE : GameEvent.BLOCK_DEACTIVATE, pos);
+            world.emitGameEvent(list.stream().findFirst().orElse(null), bl ? GameEvent.BLOCK_ACTIVATE : GameEvent.BLOCK_DEACTIVATE, pos);
         }
         if (bl) {
             world.scheduleBlockTick(new BlockPos(pos), this, this.getPressTicks());
