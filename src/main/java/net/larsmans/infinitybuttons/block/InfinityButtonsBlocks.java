@@ -182,11 +182,11 @@ public class InfinityButtonsBlocks {
     public static final Block BLACK_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("black");
 
     public static Block registerWoodenLargeButton(String name) {
-        return registerBlockWithItem(name + "_large_button", new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.WOOD)));
+        return registerBlockWithItem(name + "_large_button", new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.WOOD), false));
     }
 
     public static Block registerNetherWoodenLargeButton(String name) {
-        return registerBlockWithItem(name + "_large_button", new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.NETHER_WOOD)));
+        return registerBlockWithItem(name + "_large_button", new WoodenLargeButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).collidable(false).nonOpaque().sounds(BlockSoundGroup.NETHER_WOOD), true));
     }
 
     public static Block registerStoneLargeButton(String name) {
