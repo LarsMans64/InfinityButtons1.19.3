@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.larsmans.infinitybuttons.InfinityButtonsInit;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
@@ -50,6 +51,11 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.SAND_BUTTON);
                 entries.add(InfinityButtonsBlocks.RED_SAND_BUTTON);
                 entries.add(InfinityButtonsBlocks.GRAVEL_BUTTON);
+                entries.add(InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_BUTTON);
+                entries.add(InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_BUTTON);
+                entries.add(InfinityButtonsBlocks.GRAY_CONCRETE_POWDER_BUTTON);
+                entries.add(InfinityButtonsBlocks.BLACK_CONCRETE_POWDER_BUTTON);
+                entries.add(InfinityButtonsBlocks.BROWN_CONCRETE_POWDER_BUTTON);
                 entries.add(InfinityButtonsBlocks.RED_CONCRETE_POWDER_BUTTON);
                 entries.add(InfinityButtonsBlocks.ORANGE_CONCRETE_POWDER_BUTTON);
                 entries.add(InfinityButtonsBlocks.YELLOW_CONCRETE_POWDER_BUTTON);
@@ -61,11 +67,6 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.PURPLE_CONCRETE_POWDER_BUTTON);
                 entries.add(InfinityButtonsBlocks.MAGENTA_CONCRETE_POWDER_BUTTON);
                 entries.add(InfinityButtonsBlocks.PINK_CONCRETE_POWDER_BUTTON);
-                entries.add(InfinityButtonsBlocks.BROWN_CONCRETE_POWDER_BUTTON);
-                entries.add(InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_BUTTON);
-                entries.add(InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_BUTTON);
-                entries.add(InfinityButtonsBlocks.GRAY_CONCRETE_POWDER_BUTTON);
-                entries.add(InfinityButtonsBlocks.BLACK_CONCRETE_POWDER_BUTTON);
 
                 entries.add(InfinityButtonsBlocks.OAK_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.SPRUCE_LARGE_BUTTON);
@@ -103,6 +104,11 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.SAND_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.RED_SAND_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.GRAVEL_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.GRAY_CONCRETE_POWDER_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.BLACK_CONCRETE_POWDER_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.BROWN_CONCRETE_POWDER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.RED_CONCRETE_POWDER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.ORANGE_CONCRETE_POWDER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.YELLOW_CONCRETE_POWDER_LARGE_BUTTON);
@@ -114,12 +120,12 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.PURPLE_CONCRETE_POWDER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.MAGENTA_CONCRETE_POWDER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.PINK_CONCRETE_POWDER_LARGE_BUTTON);
-                entries.add(InfinityButtonsBlocks.BROWN_CONCRETE_POWDER_LARGE_BUTTON);
-                entries.add(InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_LARGE_BUTTON);
-                entries.add(InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_LARGE_BUTTON);
-                entries.add(InfinityButtonsBlocks.GRAY_CONCRETE_POWDER_LARGE_BUTTON);
-                entries.add(InfinityButtonsBlocks.BLACK_CONCRETE_POWDER_LARGE_BUTTON);
 
+                entries.add(InfinityButtonsBlocks.WHITE_EMERGENCY_BUTTON);
+                entries.add(InfinityButtonsBlocks.LIGHT_GRAY_EMERGENCY_BUTTON);
+                entries.add(InfinityButtonsBlocks.GRAY_EMERGENCY_BUTTON);
+                entries.add(InfinityButtonsBlocks.BLACK_EMERGENCY_BUTTON);
+                entries.add(InfinityButtonsBlocks.BROWN_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.RED_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.ORANGE_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.YELLOW_EMERGENCY_BUTTON);
@@ -131,13 +137,13 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.PURPLE_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.MAGENTA_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.PINK_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.BROWN_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.WHITE_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.LIGHT_GRAY_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.GRAY_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.BLACK_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.FANCY_EMERGENCY_BUTTON);
 
+                entries.add(InfinityButtonsBlocks.WHITE_SAFE_EMERGENCY_BUTTON);
+                entries.add(InfinityButtonsBlocks.LIGHT_GRAY_SAFE_EMERGENCY_BUTTON);
+                entries.add(InfinityButtonsBlocks.GRAY_SAFE_EMERGENCY_BUTTON);
+                entries.add(InfinityButtonsBlocks.BLACK_SAFE_EMERGENCY_BUTTON);
+                entries.add(InfinityButtonsBlocks.BROWN_SAFE_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.RED_SAFE_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.ORANGE_SAFE_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.YELLOW_SAFE_EMERGENCY_BUTTON);
@@ -149,11 +155,6 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.PURPLE_SAFE_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.MAGENTA_SAFE_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.PINK_SAFE_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.BROWN_SAFE_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.WHITE_SAFE_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.LIGHT_GRAY_SAFE_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.GRAY_SAFE_EMERGENCY_BUTTON);
-                entries.add(InfinityButtonsBlocks.BLACK_SAFE_EMERGENCY_BUTTON);
                 entries.add(InfinityButtonsBlocks.FANCY_SAFE_EMERGENCY_BUTTON);
 
                 entries.add(InfinityButtonsBlocks.BOOKSHELF_SECRET_BUTTON);
@@ -243,6 +244,80 @@ public class InfinityButtonsItemGroups {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> entries.addAfter(
                 Items.REDSTONE_TORCH,
                 InfinityButtonsBlocks.REDSTONE_TORCH_LEVER));
+
+        addToColoredBlocks(InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.GRAY_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BLACK_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BROWN_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.RED_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.ORANGE_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.YELLOW_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIME_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.GREEN_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.CYAN_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIGHT_BLUE_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BLUE_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.PURPLE_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.MAGENTA_CONCRETE_POWDER_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.PINK_CONCRETE_POWDER_BUTTON);
+
+        addToColoredBlocks(InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.GRAY_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BLACK_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BROWN_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.RED_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.ORANGE_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.YELLOW_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIME_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.GREEN_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.CYAN_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIGHT_BLUE_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BLUE_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.PURPLE_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.MAGENTA_CONCRETE_POWDER_LARGE_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.PINK_CONCRETE_POWDER_LARGE_BUTTON);
+
+        addToColoredBlocks(InfinityButtonsBlocks.WHITE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIGHT_GRAY_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.GRAY_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BLACK_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BROWN_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.RED_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.ORANGE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.YELLOW_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIME_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.GREEN_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.CYAN_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIGHT_BLUE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BLUE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.PURPLE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.MAGENTA_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.PINK_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.FANCY_EMERGENCY_BUTTON);
+
+        addToColoredBlocks(InfinityButtonsBlocks.WHITE_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIGHT_GRAY_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.GRAY_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BLACK_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BROWN_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.RED_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.ORANGE_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.YELLOW_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIME_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.GREEN_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.CYAN_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.LIGHT_BLUE_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.BLUE_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.PURPLE_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.MAGENTA_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.PINK_SAFE_EMERGENCY_BUTTON);
+        addToColoredBlocks(InfinityButtonsBlocks.FANCY_SAFE_EMERGENCY_BUTTON);
+    }
+
+    public static void addToColoredBlocks(Block item) {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(entries -> entries.add(item));
     }
 
     public static void loadItemGroup() {
