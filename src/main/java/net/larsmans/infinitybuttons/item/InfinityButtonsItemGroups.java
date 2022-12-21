@@ -6,10 +6,7 @@ import net.larsmans.infinitybuttons.InfinityButtonsInit;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 
 public class InfinityButtonsItemGroups {
@@ -201,49 +198,22 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsItems.REDSTONE_TORCH_LEVER);
             }).build();
 
-    private static void addButtonsToVanilla() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.OAK_BUTTON,
-                InfinityButtonsBlocks.OAK_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.SPRUCE_BUTTON,
-                InfinityButtonsBlocks.SPRUCE_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.BIRCH_BUTTON,
-                InfinityButtonsBlocks.BIRCH_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.JUNGLE_BUTTON,
-                InfinityButtonsBlocks.JUNGLE_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.ACACIA_BUTTON,
-                InfinityButtonsBlocks.ACACIA_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.DARK_OAK_BUTTON,
-                InfinityButtonsBlocks.DARK_OAK_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.MANGROVE_BUTTON,
-                InfinityButtonsBlocks.MANGROVE_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.CRIMSON_BUTTON,
-                InfinityButtonsBlocks.CRIMSON_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.WARPED_BUTTON,
-                InfinityButtonsBlocks.WARPED_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.STONE_BUTTON,
-                InfinityButtonsBlocks.STONE_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(
-                Items.POLISHED_BLACKSTONE_BUTTON,
-                InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> entries.addAfter(
-                Items.STONE_BUTTON,
-                InfinityButtonsBlocks.COPPER_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> entries.addAfter(
-                InfinityButtonsBlocks.COPPER_BUTTON,
-                InfinityButtonsBlocks.STICKY_COPPER_BUTTON));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> entries.addAfter(
-                Items.REDSTONE_TORCH,
-                InfinityButtonsBlocks.REDSTONE_TORCH_LEVER));
+    private static void addButtonsToVanillaTabs() {
+        addAfterInBuildingBlocks(Items.STONE_BUTTON, InfinityButtonsBlocks.STONE_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.OAK_BUTTON, InfinityButtonsBlocks.OAK_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.SPRUCE_BUTTON, InfinityButtonsBlocks.SPRUCE_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.BIRCH_BUTTON, InfinityButtonsBlocks.BIRCH_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.JUNGLE_BUTTON, InfinityButtonsBlocks.JUNGLE_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.ACACIA_BUTTON, InfinityButtonsBlocks.ACACIA_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.DARK_OAK_BUTTON, InfinityButtonsBlocks.DARK_OAK_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.MANGROVE_BUTTON, InfinityButtonsBlocks.MANGROVE_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.CRIMSON_BUTTON, InfinityButtonsBlocks.CRIMSON_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.WARPED_BUTTON, InfinityButtonsBlocks.WARPED_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.POLISHED_BLACKSTONE_BUTTON, InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON);
+
+        addAfterInRedstone(Items.STONE_BUTTON, InfinityButtonsBlocks.COPPER_BUTTON);
+        addAfterInRedstone(InfinityButtonsBlocks.COPPER_BUTTON, InfinityButtonsBlocks.STICKY_COPPER_BUTTON);
+        addAfterInRedstone(Items.REDSTONE_TORCH, InfinityButtonsBlocks.REDSTONE_TORCH_LEVER);
 
         addToColoredBlocks(InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_BUTTON);
         addToColoredBlocks(InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_BUTTON);
@@ -316,12 +286,20 @@ public class InfinityButtonsItemGroups {
         addToColoredBlocks(InfinityButtonsBlocks.FANCY_SAFE_EMERGENCY_BUTTON);
     }
 
+    public static void addAfterInBuildingBlocks(ItemConvertible afterItem, ItemConvertible newItem) {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.addAfter(afterItem, newItem));
+    }
+
+    public static void addAfterInRedstone(ItemConvertible afterItem, ItemConvertible newItem) {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> entries.addAfter(afterItem, newItem));
+    }
+
     public static void addToColoredBlocks(Block item) {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(entries -> entries.add(item));
     }
 
     public static void loadItemGroup() {
         InfinityButtonsInit.LOGGER.debug("Registering Item Group for Infinity Buttons");
-        addButtonsToVanilla();
+        addButtonsToVanillaTabs();
     }
 }
