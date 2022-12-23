@@ -199,7 +199,6 @@ public class InfinityButtonsItemGroups {
             }).build();
 
     private static void addButtonsToVanillaTabs() {
-        addAfterInBuildingBlocks(Items.STONE_BUTTON, InfinityButtonsBlocks.STONE_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.OAK_BUTTON, InfinityButtonsBlocks.OAK_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.SPRUCE_BUTTON, InfinityButtonsBlocks.SPRUCE_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.BIRCH_BUTTON, InfinityButtonsBlocks.BIRCH_LARGE_BUTTON);
@@ -209,6 +208,13 @@ public class InfinityButtonsItemGroups {
         addAfterInBuildingBlocks(Items.MANGROVE_BUTTON, InfinityButtonsBlocks.MANGROVE_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.CRIMSON_BUTTON, InfinityButtonsBlocks.CRIMSON_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.WARPED_BUTTON, InfinityButtonsBlocks.WARPED_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.STONE_BUTTON, InfinityButtonsBlocks.STONE_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.POLISHED_GRANITE_SLAB, InfinityButtonsBlocks.GRANITE_BUTTON);
+        addAfterInBuildingBlocks(InfinityButtonsBlocks.GRANITE_BUTTON, InfinityButtonsBlocks.GRANITE_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.POLISHED_DIORITE_SLAB, InfinityButtonsBlocks.DIORITE_BUTTON);
+        addAfterInBuildingBlocks(InfinityButtonsBlocks.DIORITE_BUTTON, InfinityButtonsBlocks.DIORITE_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.POLISHED_ANDESITE_SLAB, InfinityButtonsBlocks.ANDESITE_BUTTON);
+        addAfterInBuildingBlocks(InfinityButtonsBlocks.ANDESITE_BUTTON, InfinityButtonsBlocks.ANDESITE_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.POLISHED_BLACKSTONE_BUTTON, InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON);
 
         addAfterInRedstone(Items.STONE_BUTTON, InfinityButtonsBlocks.COPPER_BUTTON);
