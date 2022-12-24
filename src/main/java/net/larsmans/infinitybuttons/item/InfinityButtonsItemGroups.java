@@ -215,13 +215,13 @@ public class InfinityButtonsItemGroups {
         addAfterInBuildingBlocks(InfinityButtonsBlocks.DIORITE_BUTTON, InfinityButtonsBlocks.DIORITE_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.ANDESITE_WALL, InfinityButtonsBlocks.ANDESITE_BUTTON);
         addAfterInBuildingBlocks(InfinityButtonsBlocks.ANDESITE_BUTTON, InfinityButtonsBlocks.ANDESITE_LARGE_BUTTON);
-        addAfterInBuildingBlocks(Items.POLISHED_BLACKSTONE_BUTTON, InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON);
-        addAfterInBuildingBlocks(Items.PRISMARINE_SLAB, InfinityButtonsBlocks.PRISMARINE_BUTTON);
+        addAfterInBuildingBlocks(Items.PRISMARINE_WALL, InfinityButtonsBlocks.PRISMARINE_BUTTON);
         addAfterInBuildingBlocks(InfinityButtonsBlocks.PRISMARINE_BUTTON, InfinityButtonsBlocks.PRISMARINE_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.PRISMARINE_BRICK_SLAB, InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON);
         addAfterInBuildingBlocks(InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON, InfinityButtonsBlocks.PRISMARINE_BRICK_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.DARK_PRISMARINE_SLAB, InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON);
         addAfterInBuildingBlocks(InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON, InfinityButtonsBlocks.DARK_PRISMARINE_LARGE_BUTTON);
+        addAfterInBuildingBlocks(Items.POLISHED_BLACKSTONE_BUTTON, InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON);
 
         addAfterInRedstone(Items.STONE_BUTTON, InfinityButtonsBlocks.COPPER_BUTTON);
         addAfterInRedstone(InfinityButtonsBlocks.COPPER_BUTTON, InfinityButtonsBlocks.STICKY_COPPER_BUTTON);
