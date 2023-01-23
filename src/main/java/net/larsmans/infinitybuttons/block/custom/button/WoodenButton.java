@@ -6,8 +6,11 @@ import net.minecraft.sound.SoundEvents;
 
 public class WoodenButton extends AbstractButton {
 
-    protected WoodenButton(FabricBlockSettings settings) {
-        super(true, settings);
+    public final boolean isNetherWood;
+
+    public WoodenButton(FabricBlockSettings settings, boolean large, boolean isNetherWood) {
+        super(true, large, settings);
+        this.isNetherWood = isNetherWood;
     }
 
     @Override
@@ -17,6 +20,9 @@ public class WoodenButton extends AbstractButton {
 
     @Override
     protected SoundEvent getClickSound(boolean powered) {
+        if (isNetherWood) {
+            return powered ? SoundEvents.BLOCK_NETHER_WOOD_BUTTON_CLICK_ON : SoundEvents.BLOCK_NETHER_WOOD_BUTTON_CLICK_OFF;
+        }
         return powered ? SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_ON : SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_OFF;
     }
 }
