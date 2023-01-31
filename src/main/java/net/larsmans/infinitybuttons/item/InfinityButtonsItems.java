@@ -3,6 +3,7 @@ package net.larsmans.infinitybuttons.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.larsmans.infinitybuttons.InfinityButtonsInit;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.VerticallyAttachableBlockItem;
 import net.minecraft.registry.Registries;
@@ -16,17 +17,21 @@ public class InfinityButtonsItems {
      * Torches
      */
 
-    public static final Item TORCH_BUTTON = InfinityButtonsItems.registerItem("torch_button", new VerticallyAttachableBlockItem(InfinityButtonsBlocks.TORCH_BUTTON, InfinityButtonsBlocks.WALL_TORCH_BUTTON, new FabricItemSettings(), Direction.DOWN));
+    public static final Item TORCH_BUTTON = registerTorch("torch_button", InfinityButtonsBlocks.TORCH_BUTTON, InfinityButtonsBlocks.WALL_TORCH_BUTTON);
 
-    public static final Item TORCH_LEVER = InfinityButtonsItems.registerItem("torch_lever", new VerticallyAttachableBlockItem(InfinityButtonsBlocks.TORCH_LEVER, InfinityButtonsBlocks.WALL_TORCH_LEVER, new FabricItemSettings(), Direction.DOWN));
+    public static final Item TORCH_LEVER = registerTorch("torch_lever", InfinityButtonsBlocks.TORCH_LEVER, InfinityButtonsBlocks.WALL_TORCH_LEVER);
 
-    public static final Item SOUL_TORCH_BUTTON = InfinityButtonsItems.registerItem("soul_torch_button", new VerticallyAttachableBlockItem(InfinityButtonsBlocks.SOUL_TORCH_BUTTON, InfinityButtonsBlocks.SOUL_WALL_TORCH_BUTTON, new FabricItemSettings(), Direction.DOWN));
+    public static final Item SOUL_TORCH_BUTTON = registerTorch("soul_torch_button", InfinityButtonsBlocks.SOUL_TORCH_BUTTON, InfinityButtonsBlocks.SOUL_WALL_TORCH_BUTTON);
 
-    public static final Item SOUL_TORCH_LEVER = InfinityButtonsItems.registerItem("soul_torch_lever", new VerticallyAttachableBlockItem(InfinityButtonsBlocks.SOUL_TORCH_LEVER, InfinityButtonsBlocks.SOUL_WALL_TORCH_LEVER, new FabricItemSettings(), Direction.DOWN));
+    public static final Item SOUL_TORCH_LEVER = registerTorch("soul_torch_lever", InfinityButtonsBlocks.SOUL_TORCH_LEVER, InfinityButtonsBlocks.SOUL_WALL_TORCH_LEVER);
 
-    public static final Item REDSTONE_TORCH_BUTTON = InfinityButtonsItems.registerItem("redstone_torch_button", new VerticallyAttachableBlockItem(InfinityButtonsBlocks.REDSTONE_TORCH_BUTTON, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_BUTTON, new FabricItemSettings(), Direction.DOWN));
+    public static final Item REDSTONE_TORCH_BUTTON = registerTorch("redstone_torch_button", InfinityButtonsBlocks.REDSTONE_TORCH_BUTTON, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_BUTTON);
 
-    public static final Item REDSTONE_TORCH_LEVER = InfinityButtonsItems.registerItem("redstone_torch_lever", new VerticallyAttachableBlockItem(InfinityButtonsBlocks.REDSTONE_TORCH_LEVER, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_LEVER, new FabricItemSettings(), Direction.DOWN));
+    public static final Item REDSTONE_TORCH_LEVER = registerTorch("redstone_torch_lever", InfinityButtonsBlocks.REDSTONE_TORCH_LEVER, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_LEVER);
+
+    public static Item registerTorch(String name, Block standing, Block wall) {
+        return InfinityButtonsItems.registerItem(name, new VerticallyAttachableBlockItem(standing, wall, new FabricItemSettings(), Direction.DOWN));
+    }
 
     /**
      * Methods
