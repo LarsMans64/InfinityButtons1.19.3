@@ -166,6 +166,15 @@
     "block.infinitybuttons.lamp_button": "灯具按钮",
     "block.infinitybuttons.lamp_lever": "灯具拉杆",
 
+    "block.infinitybuttons.small_console_button": "Small Console Button",
+    "block.infinitybuttons.small_console_lever": "Small Console Lever",
+    "block.infinitybuttons.console_button": "Console Button",
+    "block.infinitybuttons.console_lever": "Console Lever",
+    "block.infinitybuttons.large_console_button": "Large Console Button",
+    "block.infinitybuttons.large_console_lever": "Large Console Lever",
+    "block.infinitybuttons.big_console_button": "Big Console Button",
+    "block.infinitybuttons.big_console_lever": "Big Console Lever",
+
     "block.infinitybuttons.torch_button": "火把按钮",
     "block.infinitybuttons.torch_lever": "火把拉杆",
     "block.infinitybuttons.soul_torch_button": "灵魂火把按钮",

@@ -167,6 +167,22 @@ public class RecipeGen extends FabricRecipeProvider {
                 .input(Items.LEVER)
                 .criterion("has_thing", RecipeProvider.conditionsFromItem(Items.REDSTONE_LAMP)).offerTo(i);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, InfinityButtonsBlocks.SMALL_CONSOLE_BUTTON, 4)
+                .pattern("IRI").input('R', Items.REDSTONE)
+                .pattern("III").input('I', Items.IRON_INGOT)
+                .criterion("has_thing", RecipeProvider.conditionsFromItem(Items.IRON_INGOT)).offerTo(i);
+
+        generateConsoleLever(i, InfinityButtonsBlocks.SMALL_CONSOLE_LEVER, InfinityButtonsBlocks.SMALL_CONSOLE_BUTTON);
+
+        generateConsoleButton(i, InfinityButtonsBlocks.CONSOLE_BUTTON, InfinityButtonsBlocks.SMALL_CONSOLE_BUTTON);
+        generateConsoleLever(i, InfinityButtonsBlocks.CONSOLE_LEVER, InfinityButtonsBlocks.CONSOLE_BUTTON);
+
+        generateConsoleButton(i, InfinityButtonsBlocks.LARGE_CONSOLE_BUTTON, InfinityButtonsBlocks.CONSOLE_BUTTON);
+        generateConsoleLever(i, InfinityButtonsBlocks.LARGE_CONSOLE_LEVER, InfinityButtonsBlocks.LARGE_CONSOLE_BUTTON);
+
+        generateConsoleButton(i, InfinityButtonsBlocks.BIG_CONSOLE_BUTTON, InfinityButtonsBlocks.LARGE_CONSOLE_BUTTON);
+        generateConsoleLever(i, InfinityButtonsBlocks.BIG_CONSOLE_LEVER, InfinityButtonsBlocks.BIG_CONSOLE_BUTTON);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, InfinityButtonsBlocks.TORCH_BUTTON)
                 .pattern("C").input('C', ItemTags.COALS)
                 .pattern("#").input('#', Items.STONE_BUTTON)
@@ -272,6 +288,14 @@ public class RecipeGen extends FabricRecipeProvider {
 
     protected void generateWoodenLargeButton(Consumer<RecipeJsonProvider> i, ItemConvertible out, ItemConvertible in, ItemConvertible adv) {
         generateLargeButton(i, out, in, adv, "wooden_large_button");
+    }
+
+    protected void generateConsoleButton(Consumer<RecipeJsonProvider> i, ItemConvertible out, ItemConvertible in) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, out).input(in).input(Items.IRON_INGOT).criterion("has_thing", RecipeProvider.conditionsFromItem(Items.IRON_INGOT)).offerTo(i);
+    }
+
+    protected void generateConsoleLever(Consumer<RecipeJsonProvider> i, ItemConvertible out, ItemConvertible in) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, out).input(in).input(Items.LEVER).criterion("has_thing", RecipeProvider.conditionsFromItem(Items.IRON_INGOT)).offerTo(i);
     }
 
     protected void generateStonecutter(Consumer<RecipeJsonProvider> i, ItemConvertible out, ItemConvertible in) {

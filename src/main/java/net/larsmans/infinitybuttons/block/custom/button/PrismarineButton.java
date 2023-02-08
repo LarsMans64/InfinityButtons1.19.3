@@ -26,13 +26,12 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismarineButton extends AbstractButton implements Waterloggable {
+public class PrismarineButton extends AbstractSmallButton implements Waterloggable {
 
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     public PrismarineButton(FabricBlockSettings settings, boolean large) {
         super(true, large, settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(PRESSED, false).with(FACE, WallMountLocation.FLOOR).with(WATERLOGGED, false));
     }
 
     @Override
