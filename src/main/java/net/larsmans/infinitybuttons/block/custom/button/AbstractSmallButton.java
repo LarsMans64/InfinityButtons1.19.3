@@ -38,8 +38,6 @@ public abstract class AbstractSmallButton extends AbstractButton {
         this.large = large;
     }
 
-    public abstract int getPressTicks();
-
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         if (large) {

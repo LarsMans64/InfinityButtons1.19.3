@@ -364,8 +364,8 @@ public class InfinityButtonsBlocks {
         return FabricBlockSettings.of(Material.DECORATION).nonOpaque().strength(0.3f).sounds(BlockSoundGroup.GLASS).luminance(getLampButtonLight());
     }
 
-    public static FabricBlockSettings consoleButtonSettings() {
-        return FabricBlockSettings.of(Material.METAL).nonOpaque().strength(0.5f).sounds(BlockSoundGroup.METAL);
+    public static FabricBlockSettings doorbellSettings() {
+        return FabricBlockSettings.of(Material.DECORATION).nonOpaque().noCollision().strength(0.5f).sounds(BlockSoundGroup.WOOD);
     }
 
     /**
@@ -381,8 +381,8 @@ public class InfinityButtonsBlocks {
     public static final Block BIG_CONSOLE_BUTTON = registerBlockWithItem("big_console_button", new LargeConsoleButton(consoleButtonSettings(), false));
     public static final Block BIG_CONSOLE_LEVER = registerBlockWithItem("big_console_lever", new LargeConsoleButton(consoleButtonSettings(), true));
 
-    public static FabricBlockSettings doorbellSettings() {
-        return FabricBlockSettings.of(Material.DECORATION).nonOpaque().noCollision().strength(0.5f).sounds(BlockSoundGroup.WOOD);
+    public static FabricBlockSettings consoleButtonSettings() {
+        return FabricBlockSettings.of(Material.METAL).nonOpaque().strength(0.5f).sounds(BlockSoundGroup.METAL);
     }
 
     /**

@@ -190,6 +190,15 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.LAMP_BUTTON);
                 entries.add(InfinityButtonsBlocks.LAMP_LEVER);
 
+                entries.add(InfinityButtonsBlocks.SMALL_CONSOLE_BUTTON);
+                entries.add(InfinityButtonsBlocks.SMALL_CONSOLE_LEVER);
+                entries.add(InfinityButtonsBlocks.CONSOLE_BUTTON);
+                entries.add(InfinityButtonsBlocks.CONSOLE_LEVER);
+                entries.add(InfinityButtonsBlocks.LARGE_CONSOLE_BUTTON);
+                entries.add(InfinityButtonsBlocks.LARGE_CONSOLE_LEVER);
+                entries.add(InfinityButtonsBlocks.BIG_CONSOLE_BUTTON);
+                entries.add(InfinityButtonsBlocks.BIG_CONSOLE_LEVER);
+
                 entries.add(InfinityButtonsItems.TORCH_BUTTON);
                 entries.add(InfinityButtonsItems.TORCH_LEVER);
                 entries.add(InfinityButtonsItems.SOUL_TORCH_BUTTON);
