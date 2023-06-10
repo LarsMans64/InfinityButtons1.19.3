@@ -6,6 +6,7 @@ import net.larsmans.infinitybuttons.InfinityButtonsInit;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
 import net.larsmans.infinitybuttons.block.custom.LampButton;
+import net.larsmans.infinitybuttons.block.custom.LanternButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
 import net.larsmans.infinitybuttons.block.custom.consolebutton.ConsoleButton;
 import net.larsmans.infinitybuttons.block.custom.consolebutton.LargeConsoleButton;
@@ -359,6 +360,10 @@ public class InfinityButtonsBlocks {
     public static final Block DOORBELL_BUTTON = registerBlockWithItem("doorbell_button", new DoorbellButton(doorbellSettings()));
     public static final Block LAMP_BUTTON = registerBlockWithItem("lamp_button", new LampButton(lampSettings(), false));
     public static final Block LAMP_LEVER = registerBlockWithItem("lamp_lever", new LampButton(lampSettings(), true));
+    public static final Block LANTERN_BUTTON = registerBlockWithItem("lantern_button", new LanternButton(lanternSettings().luminance(state -> 15), false));
+    public static final Block LANTERN_LEVER = registerBlockWithItem("lantern_lever", new LanternButton(lanternSettings().luminance(state -> 15), true));
+    public static final Block SOUL_LANTERN_BUTTON = registerBlockWithItem("soul_lantern_button", new LanternButton(lanternSettings().luminance(state -> 10), false));
+    public static final Block SOUL_LANTERN_LEVER = registerBlockWithItem("soul_lantern_lever", new LanternButton(lanternSettings().luminance(state -> 10), true));
 
     public static FabricBlockSettings lampSettings() {
         return FabricBlockSettings.of(Material.DECORATION).nonOpaque().strength(0.3f).sounds(BlockSoundGroup.GLASS).luminance(getLampButtonLight());
@@ -366,6 +371,10 @@ public class InfinityButtonsBlocks {
 
     public static FabricBlockSettings doorbellSettings() {
         return FabricBlockSettings.of(Material.DECORATION).nonOpaque().noCollision().strength(0.5f).sounds(BlockSoundGroup.WOOD);
+    }
+
+    public static FabricBlockSettings lanternSettings() {
+        return FabricBlockSettings.of(Material.METAL).nonOpaque().requiresTool().strength(3.5f).sounds(BlockSoundGroup.LANTERN).nonOpaque();
     }
 
     /**

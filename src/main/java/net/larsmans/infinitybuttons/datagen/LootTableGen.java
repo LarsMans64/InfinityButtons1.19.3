@@ -174,6 +174,10 @@ public class LootTableGen extends FabricBlockLootTableProvider {
         addDrop(InfinityButtonsBlocks.DOORBELL_BUTTON);
         addDrop(InfinityButtonsBlocks.LAMP_BUTTON);
         addDrop(InfinityButtonsBlocks.LAMP_LEVER);
+        addDrop(InfinityButtonsBlocks.LANTERN_BUTTON);
+        addDrop(InfinityButtonsBlocks.LANTERN_LEVER);
+        addDrop(InfinityButtonsBlocks.SOUL_LANTERN_BUTTON);
+        addDrop(InfinityButtonsBlocks.SOUL_LANTERN_LEVER);
 
         addDrop(InfinityButtonsBlocks.SMALL_CONSOLE_BUTTON);
         addDrop(InfinityButtonsBlocks.SMALL_CONSOLE_LEVER);

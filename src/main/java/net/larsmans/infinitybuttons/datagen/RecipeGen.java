@@ -167,6 +167,26 @@ public class RecipeGen extends FabricRecipeProvider {
                 .input(Items.LEVER)
                 .criterion("has_thing", RecipeProvider.conditionsFromItem(Items.REDSTONE_LAMP)).offerTo(i);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, InfinityButtonsBlocks.LANTERN_BUTTON)
+                .input(Items.LANTERN)
+                .input(Items.STONE_BUTTON)
+                .criterion("has_thing", RecipeProvider.conditionsFromItem(Items.LANTERN)).offerTo(i);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, InfinityButtonsBlocks.LANTERN_LEVER)
+                .input(Items.LANTERN)
+                .input(Items.LEVER)
+                .criterion("has_thing", RecipeProvider.conditionsFromItem(Items.LANTERN)).offerTo(i);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, InfinityButtonsBlocks.SOUL_LANTERN_BUTTON)
+                .input(Items.SOUL_LANTERN)
+                .input(Items.STONE_BUTTON)
+                .criterion("has_thing", RecipeProvider.conditionsFromItem(Items.SOUL_LANTERN)).offerTo(i);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, InfinityButtonsBlocks.SOUL_LANTERN_LEVER)
+                .input(Items.SOUL_LANTERN)
+                .input(Items.LEVER)
+                .criterion("has_thing", RecipeProvider.conditionsFromItem(Items.SOUL_LANTERN)).offerTo(i);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, InfinityButtonsBlocks.SMALL_CONSOLE_BUTTON, 4)
                 .pattern("IRI").input('R', Items.REDSTONE)
                 .pattern("III").input('I', Items.IRON_INGOT)
