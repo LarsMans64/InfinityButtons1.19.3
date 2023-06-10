@@ -62,7 +62,7 @@ public abstract class AbstractButton extends WallMountedBlock {
     }
 
     protected void playClickSound(@Nullable PlayerEntity player, WorldAccess world, BlockPos pos, boolean pressed) {
-        world.playSound(pressed ? player : null, pos, this.getClickSound(pressed), SoundCategory.BLOCKS, 0.3f, pressed ? 0.6f : 0.5f);
+        world.playSound(pressed ? player : null, pos, this.getClickSound(pressed), SoundCategory.BLOCKS);
     }
 
     protected abstract SoundEvent getClickSound(boolean pressed);

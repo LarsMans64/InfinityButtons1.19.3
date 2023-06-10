@@ -93,7 +93,7 @@ public abstract class AbstractHorizontalButton extends HorizontalFacingBlock {
     public abstract int getPressTicks();
 
     protected void playClickSound(@Nullable PlayerEntity player, WorldAccess world, BlockPos pos, boolean pressed) {
-        world.playSound(pressed ? player : null, pos, this.getClickSound(pressed), SoundCategory.BLOCKS, 0.3f, pressed ? 0.6f : 0.5f);
+        world.playSound(pressed ? player : null, pos, this.getClickSound(pressed), SoundCategory.BLOCKS);
     }
 
     protected abstract SoundEvent getClickSound(boolean pressed);
