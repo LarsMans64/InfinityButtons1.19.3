@@ -189,6 +189,7 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.DOORBELL_BUTTON);
                 entries.add(InfinityButtonsBlocks.LAMP_BUTTON);
                 entries.add(InfinityButtonsBlocks.LAMP_LEVER);
+                entries.add(InfinityButtonsBlocks.LETTER_BUTTON);
                 entries.add(InfinityButtonsBlocks.LANTERN_BUTTON);
                 entries.add(InfinityButtonsBlocks.LANTERN_LEVER);
                 entries.add(InfinityButtonsBlocks.SOUL_LANTERN_BUTTON);
