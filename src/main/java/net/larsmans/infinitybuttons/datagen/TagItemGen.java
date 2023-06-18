@@ -253,6 +253,8 @@ public class TagItemGen extends FabricTagProvider<Item> {
         getOrCreateTagBuilder(PIGLIN_REPELLENTS)
                 .add(InfinityButtonsBlocks.SOUL_TORCH_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.SOUL_TORCH_LEVER.asItem())
+                .add(InfinityButtonsBlocks.SOUL_LANTERN_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.SOUL_LANTERN_LEVER.asItem())
         ;
 
         getOrCreateTagBuilder(STONE_BRICKS)
