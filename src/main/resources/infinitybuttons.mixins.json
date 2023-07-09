@@ -6,7 +6,6 @@
     "mixins": [
         "ChainBlockMixin",
         "EnchantingTableBlockMixin",
-        "LivingEntityMixin",
         "ServerPlayerInteractionManagerMixin"
     ],
     "injectors": {

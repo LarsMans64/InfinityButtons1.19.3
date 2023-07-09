@@ -16,7 +16,9 @@ import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyBu
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.*;
 import net.larsmans.infinitybuttons.block.custom.torch.*;
+import net.larsmans.infinitybuttons.item.SafeEmergencyButtonItem;
 import net.minecraft.block.*;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.BlockItem;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
@@ -280,7 +282,10 @@ public class InfinityButtonsBlocks {
     }
 
     public static Block registerSafeEmergencyButton(String name) {
-        return registerBlockWithItem(name + "_safe_emergency_button", new SafeEmergencyButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).nonOpaque().sounds(BlockSoundGroup.METAL)));
+        Block block = registerOnlyBlock(name + "_safe_emergency_button", new SafeEmergencyButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).nonOpaque().sounds(BlockSoundGroup.METAL)));
+        Registry.register(Registries.ITEM, new Identifier("infinitybuttons", name + "_safe_emergency_button"),
+                new SafeEmergencyButtonItem(block, new FabricItemSettings().equipmentSlot(stack -> EquipmentSlot.HEAD)));
+        return block;
     }
 
     /**
