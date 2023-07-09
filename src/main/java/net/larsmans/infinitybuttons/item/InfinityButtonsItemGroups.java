@@ -231,23 +231,95 @@ public class InfinityButtonsItemGroups {
         addAfterInBuildingBlocks(Items.CRIMSON_BUTTON, InfinityButtonsBlocks.CRIMSON_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.WARPED_BUTTON, InfinityButtonsBlocks.WARPED_LARGE_BUTTON);
         addAfterInBuildingBlocks(Items.STONE_BUTTON, InfinityButtonsBlocks.STONE_LARGE_BUTTON);
-        addAfterInBuildingBlocks(Items.GRANITE_WALL, InfinityButtonsBlocks.GRANITE_BUTTON);
-        addAfterInBuildingBlocks(InfinityButtonsBlocks.GRANITE_BUTTON, InfinityButtonsBlocks.GRANITE_LARGE_BUTTON);
-        addAfterInBuildingBlocks(Items.DIORITE_WALL, InfinityButtonsBlocks.DIORITE_BUTTON);
-        addAfterInBuildingBlocks(InfinityButtonsBlocks.DIORITE_BUTTON, InfinityButtonsBlocks.DIORITE_LARGE_BUTTON);
-        addAfterInBuildingBlocks(Items.ANDESITE_WALL, InfinityButtonsBlocks.ANDESITE_BUTTON);
-        addAfterInBuildingBlocks(InfinityButtonsBlocks.ANDESITE_BUTTON, InfinityButtonsBlocks.ANDESITE_LARGE_BUTTON);
-        addAfterInBuildingBlocks(Items.PRISMARINE_WALL, InfinityButtonsBlocks.PRISMARINE_BUTTON);
-        addAfterInBuildingBlocks(InfinityButtonsBlocks.PRISMARINE_BUTTON, InfinityButtonsBlocks.PRISMARINE_LARGE_BUTTON);
-        addAfterInBuildingBlocks(Items.PRISMARINE_BRICK_SLAB, InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON);
-        addAfterInBuildingBlocks(InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON, InfinityButtonsBlocks.PRISMARINE_BRICK_LARGE_BUTTON);
-        addAfterInBuildingBlocks(Items.DARK_PRISMARINE_SLAB, InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON);
-        addAfterInBuildingBlocks(InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON, InfinityButtonsBlocks.DARK_PRISMARINE_LARGE_BUTTON);
+
+        addMultipleAfterInBuildingBlocks(Items.GRANITE_WALL, new ItemConvertible[]{
+                InfinityButtonsBlocks.GRANITE_BUTTON,
+                InfinityButtonsBlocks.GRANITE_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.DIORITE_WALL, new ItemConvertible[]{
+                InfinityButtonsBlocks.DIORITE_BUTTON,
+                InfinityButtonsBlocks.DIORITE_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.ANDESITE_WALL, new ItemConvertible[]{
+                InfinityButtonsBlocks.ANDESITE_BUTTON,
+                InfinityButtonsBlocks.ANDESITE_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.PRISMARINE_WALL, new ItemConvertible[]{
+                InfinityButtonsBlocks.PRISMARINE_BUTTON,
+                InfinityButtonsBlocks.PRISMARINE_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.PRISMARINE_BRICK_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON,
+                InfinityButtonsBlocks.PRISMARINE_BRICK_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.DARK_PRISMARINE_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON,
+                InfinityButtonsBlocks.DARK_PRISMARINE_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.DIORITE_WALL, new ItemConvertible[]{
+                InfinityButtonsBlocks.DIORITE_BUTTON,
+                InfinityButtonsBlocks.DIORITE_LARGE_BUTTON,
+        });
+
         addAfterInBuildingBlocks(Items.POLISHED_BLACKSTONE_BUTTON, InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON);
 
-        addAfterInRedstone(Items.STONE_BUTTON, InfinityButtonsBlocks.COPPER_BUTTON);
-        addAfterInRedstone(InfinityButtonsBlocks.COPPER_BUTTON, InfinityButtonsBlocks.STICKY_COPPER_BUTTON);
+        addMultipleAfterInBuildingBlocks(Items.HEAVY_WEIGHTED_PRESSURE_PLATE, new ItemConvertible[]{
+                InfinityButtonsBlocks.IRON_BUTTON,
+                InfinityButtonsBlocks.IRON_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.LIGHT_WEIGHTED_PRESSURE_PLATE, new ItemConvertible[]{
+                InfinityButtonsBlocks.GOLD_BUTTON,
+                InfinityButtonsBlocks.GOLD_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.CUT_COPPER_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.COPPER_BUTTON,
+                InfinityButtonsBlocks.COPPER_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.EXPOSED_CUT_COPPER_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.EXPOSED_COPPER_BUTTON,
+                InfinityButtonsBlocks.EXPOSED_COPPER_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.WEATHERED_CUT_COPPER_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.WEATHERED_COPPER_BUTTON,
+                InfinityButtonsBlocks.WEATHERED_COPPER_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.OXIDIZED_CUT_COPPER_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.OXIDIZED_COPPER_BUTTON,
+                InfinityButtonsBlocks.OXIDIZED_COPPER_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.WAXED_CUT_COPPER_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.WAXED_COPPER_BUTTON,
+                InfinityButtonsBlocks.WAXED_COPPER_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.WAXED_EXPOSED_CUT_COPPER_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_BUTTON,
+                InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.WAXED_WEATHERED_CUT_COPPER_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_BUTTON,
+                InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_LARGE_BUTTON,
+        });
+        addMultipleAfterInBuildingBlocks(Items.WAXED_OXIDIZED_CUT_COPPER_SLAB, new ItemConvertible[]{
+                InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_BUTTON,
+                InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_LARGE_BUTTON,
+        });
+
+        addMultipleAfterInRedstone(Items.STONE_BUTTON, new ItemConvertible[]{
+                InfinityButtonsBlocks.WAXED_COPPER_LARGE_BUTTON,
+                InfinityButtonsBlocks.STICKY_COPPER_LARGE_BUTTON,
+        });
+
         addAfterInRedstone(Items.REDSTONE_TORCH, InfinityButtonsBlocks.REDSTONE_TORCH_LEVER);
+
+        addMultipleAfterInRedstone(Items.HEAVY_WEIGHTED_PRESSURE_PLATE, new ItemConvertible[]{
+                InfinityButtonsBlocks.GOLD_LARGE_BUTTON,
+                InfinityButtonsBlocks.IRON_LARGE_BUTTON,
+                InfinityButtonsBlocks.EMERALD_LARGE_BUTTON,
+        });
+        addMultipleAfterInRedstone(Items.REDSTONE_LAMP, new ItemConvertible[]{
+                InfinityButtonsBlocks.LAMP_BUTTON,
+                InfinityButtonsBlocks.LAMP_LEVER,
+        });
 
         addToColoredBlocks(InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_BUTTON);
         addToColoredBlocks(InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_BUTTON);
@@ -318,6 +390,20 @@ public class InfinityButtonsItemGroups {
         addToColoredBlocks(InfinityButtonsBlocks.MAGENTA_SAFE_EMERGENCY_BUTTON);
         addToColoredBlocks(InfinityButtonsBlocks.PINK_SAFE_EMERGENCY_BUTTON);
         addToColoredBlocks(InfinityButtonsBlocks.FANCY_SAFE_EMERGENCY_BUTTON);
+    }
+
+    public static void addMultipleAfterInBuildingBlocks(ItemConvertible afterItem, ItemConvertible[] list) {
+        addAfterInBuildingBlocks(afterItem, list[0]);
+        for (int i = 1; i < list.length; i++) {
+            addAfterInBuildingBlocks(list[i - 1], list[i]);
+        }
+    }
+
+    public static void addMultipleAfterInRedstone(ItemConvertible afterItem, ItemConvertible[] list) {
+        addAfterInRedstone(afterItem, list[0]);
+        for (int i = 1; i < list.length; i++) {
+            addAfterInRedstone(list[i - 1], list[i]);
+        }
     }
 
     public static void addAfterInBuildingBlocks(ItemConvertible afterItem, ItemConvertible newItem) {
