@@ -34,6 +34,10 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.EXPOSED_COPPER_BUTTON);
                 entries.add(InfinityButtonsBlocks.WEATHERED_COPPER_BUTTON);
                 entries.add(InfinityButtonsBlocks.OXIDIZED_COPPER_BUTTON);
+                entries.add(InfinityButtonsBlocks.WAXED_COPPER_BUTTON);
+                entries.add(InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_BUTTON);
+                entries.add(InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_BUTTON);
+                entries.add(InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
                 entries.add(InfinityButtonsBlocks.STICKY_COPPER_BUTTON);
                 entries.add(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_BUTTON);
                 entries.add(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_BUTTON);
@@ -87,6 +91,10 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.EXPOSED_COPPER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.WEATHERED_COPPER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.OXIDIZED_COPPER_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.WAXED_COPPER_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_LARGE_BUTTON);
+                entries.add(InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.STICKY_COPPER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_LARGE_BUTTON);
                 entries.add(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_LARGE_BUTTON);
