@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
-  "group": "sticky_copper_large_button",
+  "group": "sticky_copper_large_buttons",
   "ingredients": [
     {
       "item": "infinitybuttons:sticky_exposed_copper_button"

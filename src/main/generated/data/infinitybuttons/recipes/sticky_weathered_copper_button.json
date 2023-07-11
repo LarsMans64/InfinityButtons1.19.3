@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
+  "group": "sticky_copper_buttons",
   "ingredients": [
     {
-      "item": "infinitybuttons:weathered_copper_button"
+      "item": "infinitybuttons:waxed_weathered_copper_button"
     },
     {
-      "item": "minecraft:honeycomb"
+      "item": "minecraft:honey_bottle"
     }
   ],
   "result": {

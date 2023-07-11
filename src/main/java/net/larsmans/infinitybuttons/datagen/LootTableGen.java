@@ -22,6 +22,10 @@ public class LootTableGen extends FabricBlockLootTableProvider {
         addDrop(InfinityButtonsBlocks.EXPOSED_COPPER_BUTTON);
         addDrop(InfinityButtonsBlocks.WEATHERED_COPPER_BUTTON);
         addDrop(InfinityButtonsBlocks.OXIDIZED_COPPER_BUTTON);
+        addDrop(InfinityButtonsBlocks.WAXED_COPPER_BUTTON);
+        addDrop(InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_BUTTON);
+        addDrop(InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_BUTTON);
+        addDrop(InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
         addDrop(InfinityButtonsBlocks.STICKY_COPPER_BUTTON);
         addDrop(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_BUTTON);
         addDrop(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_BUTTON);
@@ -74,6 +78,10 @@ public class LootTableGen extends FabricBlockLootTableProvider {
         addDrop(InfinityButtonsBlocks.EXPOSED_COPPER_LARGE_BUTTON);
         addDrop(InfinityButtonsBlocks.WEATHERED_COPPER_LARGE_BUTTON);
         addDrop(InfinityButtonsBlocks.OXIDIZED_COPPER_LARGE_BUTTON);
+        addDrop(InfinityButtonsBlocks.WAXED_COPPER_LARGE_BUTTON);
+        addDrop(InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_LARGE_BUTTON);
+        addDrop(InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_LARGE_BUTTON);
+        addDrop(InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_LARGE_BUTTON);
         addDrop(InfinityButtonsBlocks.STICKY_COPPER_LARGE_BUTTON);
         addDrop(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_LARGE_BUTTON);
         addDrop(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_LARGE_BUTTON);

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
-  "group": "concrete_powder_large_button",
+  "group": "concrete_powder_large_buttons",
   "ingredients": [
     {
       "item": "infinitybuttons:white_concrete_powder_button"

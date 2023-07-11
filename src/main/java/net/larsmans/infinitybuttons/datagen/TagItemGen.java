@@ -28,6 +28,8 @@ public class TagItemGen extends FabricTagProvider<Item> {
     public static final TagKey<Item> TORCH_BUTTONS = add("torch_buttons");
     public static final TagKey<Item> CONSOLE_BUTTONS = add("console_buttons");
     public static final TagKey<Item> LANTERN_BUTTONS = add("lantern_buttons");
+    public static final TagKey<Item> COPPER_BUTTONS = add("copper_buttons");
+    public static final TagKey<Item> COPPER_LARGE_BUTTONS = add("copper_large_buttons");
 
     static TagKey<Item> add(String name) {
         return TagKey.of(RegistryKeys.ITEM, new Identifier("infinitybuttons:" + name));
@@ -74,6 +76,8 @@ public class TagItemGen extends FabricTagProvider<Item> {
 
         getOrCreateTagBuilder(LARGE_BUTTONS)
                 .addOptionalTag(WOODEN_LARGE_BUTTONS)
+                .addOptionalTag(COPPER_LARGE_BUTTONS)
+                .addOptionalTag(CONCRETE_POWDER_LARGE_BUTTONS)
                 .add(InfinityButtonsBlocks.STONE_LARGE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.DEEPSLATE_LARGE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.GRANITE_LARGE_BUTTON.asItem())
@@ -83,14 +87,6 @@ public class TagItemGen extends FabricTagProvider<Item> {
                 .add(InfinityButtonsBlocks.DRIPSTONE_LARGE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.CALCITE_LARGE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.COPPER_LARGE_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.EXPOSED_COPPER_LARGE_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.WEATHERED_COPPER_LARGE_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.OXIDIZED_COPPER_LARGE_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.STICKY_COPPER_LARGE_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_LARGE_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_LARGE_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.STICKY_OXIDIZED_COPPER_LARGE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.IRON_LARGE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.GOLD_LARGE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.EMERALD_LARGE_BUTTON.asItem())
@@ -101,7 +97,6 @@ public class TagItemGen extends FabricTagProvider<Item> {
                 .add(InfinityButtonsBlocks.SAND_LARGE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.RED_SAND_LARGE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.GRAVEL_LARGE_BUTTON.asItem())
-                .addOptionalTag(CONCRETE_POWDER_LARGE_BUTTONS)
         ;
 
         getOrCreateTagBuilder(WOODEN_LARGE_BUTTONS)
@@ -223,6 +218,36 @@ public class TagItemGen extends FabricTagProvider<Item> {
                 .add(InfinityButtonsBlocks.SOUL_LANTERN_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.SOUL_LANTERN_LEVER.asItem())
         ;
+
+        getOrCreateTagBuilder(COPPER_BUTTONS)
+                .add(InfinityButtonsBlocks.COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.EXPOSED_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WEATHERED_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.OXIDIZED_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WAXED_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.STICKY_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.STICKY_OXIDIZED_COPPER_BUTTON.asItem())
+        ;
+
+        getOrCreateTagBuilder(COPPER_LARGE_BUTTONS)
+                .add(InfinityButtonsBlocks.COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.EXPOSED_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WEATHERED_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.OXIDIZED_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WAXED_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.STICKY_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_LARGE_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.STICKY_OXIDIZED_COPPER_LARGE_BUTTON.asItem())
+        ;
     }
     
     public static final TagKey<Item> BUTTONS = edit("buttons");
@@ -237,6 +262,8 @@ public class TagItemGen extends FabricTagProvider<Item> {
     protected void generateVanillaTags() {
 
         getOrCreateTagBuilder(BUTTONS)
+                .addOptionalTag(COPPER_BUTTONS)
+                .addOptionalTag(CONCRETE_POWDER_BUTTONS)
                 .add(InfinityButtonsBlocks.DEEPSLATE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.GRANITE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.DIORITE_BUTTON.asItem())
@@ -244,14 +271,6 @@ public class TagItemGen extends FabricTagProvider<Item> {
                 .add(InfinityButtonsBlocks.TUFF_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.DRIPSTONE_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.CALCITE_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.COPPER_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.EXPOSED_COPPER_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.WEATHERED_COPPER_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.OXIDIZED_COPPER_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.STICKY_COPPER_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_BUTTON.asItem())
-                .add(InfinityButtonsBlocks.STICKY_OXIDIZED_COPPER_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.IRON_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.GOLD_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.EMERALD_BUTTON.asItem())
@@ -262,7 +281,6 @@ public class TagItemGen extends FabricTagProvider<Item> {
                 .add(InfinityButtonsBlocks.SAND_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.RED_SAND_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.GRAVEL_BUTTON.asItem())
-                .addOptionalTag(CONCRETE_POWDER_BUTTONS)
         ;
 
         getOrCreateTagBuilder(NON_FLAMMABLE_WOOD)
