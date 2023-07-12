@@ -6,32 +6,35 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 
-public class BigBrickSecretButton extends AbstractSecretButton {
-    public BigBrickSecretButton(Settings settings, Block jadeBlock) {
-        super (
-                settings,
+public class TileSecretButton extends AbstractSecretButton{
+    public TileSecretButton(Settings properties, Block jadeBlock) {
+        super(
+                properties,
                 VoxelShapes.union(BASE,
-                        Block.createCuboidShape(0, 8, 3, 16, 16, 19)
+                        Block.createCuboidShape(0, 8, 0, 8, 16, 16),
+                        Block.createCuboidShape(8, 8, 3, 16, 16, 19)
                 ),
                 VoxelShapes.union(BASE,
-                        Block.createCuboidShape(-3, 8, 0, 13, 16, 16)
+                        Block.createCuboidShape(0, 8, 0, 16, 16, 8),
+                        Block.createCuboidShape(-3, 8, 8, 13, 16, 16)
                 ),
                 VoxelShapes.union(BASE,
-                        Block.createCuboidShape(0, 8, -3, 16, 16, 13)
+                        Block.createCuboidShape(8, 8, 0, 16, 16, 16),
+                        Block.createCuboidShape(0, 8, -3, 8, 16, 13)
                 ),
                 VoxelShapes.union(BASE,
-                        Block.createCuboidShape(3, 8, 0, 19, 16, 16)
+                        Block.createCuboidShape(0, 8, 8, 16, 16, 16),
+                        Block.createCuboidShape(3, 8, 0, 19, 16, 8)
                 ),
                 Block.createCuboidShape(0, 0, 0, 16, 16, 16),
                 jadeBlock
         );
     }
 
-    // The bottom part that doesn't move
     private static final VoxelShape BASE = Block.createCuboidShape(0, 0, 0, 16, 8, 16);
 
     @Override
-    protected SoundEvent getClickSound(boolean var1) {
+    protected SoundEvent getClickSound(boolean pressed) {
         return InfinityButtonsSounds.STONE_SCRAPE;
     }
 }

@@ -159,6 +159,7 @@
   "block.infinitybuttons.warped_plank_secret_button": "诡异木板隐蔽按钮",
   "block.infinitybuttons.mud_brick_secret_button": "泥砖隐蔽按钮",
   "block.infinitybuttons.end_stone_brick_secret_button": "末地石砖隐蔽按钮",
+  "block.infinitybuttons.purpur_block_secret_button": "Purpur Block Secret Button",
   "block.infinitybuttons.quartz_brick_secret_button": "石英砖隐蔽按钮",
   "block.infinitybuttons.dark_prismarine_secret_button": "暗海晶石隐蔽按钮",
   "block.infinitybuttons.polished_blackstone_brick_secret_button": "磨制黑石砖隐蔽按钮",
@@ -257,5 +258,8 @@
   "tag.item.infinitybuttons.secret_buttons": "Secret Buttons",
   "tag.item.infinitybuttons.torch_buttons": "Torch Buttons",
   "tag.item.infinitybuttons.wooden_large_buttons": "Wooden Large Buttons",
-  "tag.item.infinitybuttons.wooden_secret_buttons": "Wooden Secret Buttons"
+  "tag.item.infinitybuttons.wooden_secret_buttons": "Wooden Secret Buttons",
+
+  "config.jade.plugin_infinitybuttons.hide_secret_buttons": "Hide Secret Buttons",
+  "config.jade.plugin_infinitybuttons.hide_torch_buttons": "Hide Torch Buttons"
 }

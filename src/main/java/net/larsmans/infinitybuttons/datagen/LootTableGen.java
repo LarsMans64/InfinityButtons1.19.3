@@ -168,6 +168,7 @@ public class LootTableGen extends FabricBlockLootTableProvider {
         addDrop(InfinityButtonsBlocks.WARPED_PLANK_SECRET_BUTTON);
         addDrop(InfinityButtonsBlocks.MUD_BRICK_SECRET_BUTTON);
         addDrop(InfinityButtonsBlocks.END_STONE_BRICK_SECRET_BUTTON);
+        addDrop(InfinityButtonsBlocks.PURPUR_BLOCK_SECRET_BUTTON);
         addDrop(InfinityButtonsBlocks.QUARTZ_BRICK_SECRET_BUTTON);
         addDrop(InfinityButtonsBlocks.DARK_PRISMARINE_SECRET_BUTTON);
         addDrop(InfinityButtonsBlocks.POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON);
