@@ -9,7 +9,15 @@ import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButtonEnum;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.gui.LetterButtonGui;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroups;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
+import net.larsmans.infinitybuttons.item.SafeEmergencyButtonItem;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
+import net.minecraft.block.DispenserBlock;
+import net.minecraft.block.dispenser.FallibleItemDispenserBehavior;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.math.BlockPointer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.slf4j.Logger;
@@ -27,12 +35,27 @@ public class InfinityButtonsInit implements ModInitializer {
 			LetterButtonEnum letterButtonEnum = buf.readEnumConstant(LetterButtonEnum.class);
 			World world = player.getWorld();
 			world.setBlockState(pos, world.getBlockState(pos).with(LetterButton.CHARACTER, letterButtonEnum));
-		});
+			});
 
 		InfinityButtonsItems.registerModItems();
 		InfinityButtonsBlocks.registerModBlocks();
 		InfinityButtonsSounds.registerSounds();
 		InfinityButtonsItemGroups.loadItemGroup();
 		InfinityButtonsTriggers.register();
+		registerDispenserBehavior();
+	}
+
+	public static void registerDispenserBehavior() {
+		for (Item item : Registries.ITEM.stream().toList()) {
+			if (item instanceof SafeEmergencyButtonItem) {
+				DispenserBlock.registerBehavior(item, new FallibleItemDispenserBehavior() {
+					@Override
+					protected ItemStack dispenseSilently(BlockPointer pointer, ItemStack stack) {
+						this.setSuccess(ArmorItem.dispenseArmor(pointer, stack));
+						return stack;
+					}
+				});
+			}
+		}
 	}
 }
