@@ -10,6 +10,7 @@ import net.larsmans.infinitybuttons.block.custom.letterbutton.gui.LetterButtonGu
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroups;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.item.SafeEmergencyButtonItem;
+import net.larsmans.infinitybuttons.particle.InfinityButtonsParticleTypes;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.FallibleItemDispenserBehavior;
@@ -42,6 +43,7 @@ public class InfinityButtonsInit implements ModInitializer {
 		InfinityButtonsSounds.registerSounds();
 		InfinityButtonsItemGroups.loadItemGroup();
 		InfinityButtonsTriggers.register();
+		InfinityButtonsParticleTypes.register();
 		registerDispenserBehavior();
 	}
 
