@@ -132,6 +132,7 @@ public class RecipeGen extends FabricRecipeProvider {
         genSecretButton(i, InfinityButtonsBlocks.WARPED_PLANK_SECRET_BUTTON, Items.WARPED_PLANKS);
         genSecretButton(i, InfinityButtonsBlocks.MUD_BRICK_SECRET_BUTTON, Items.MUD_BRICKS);
         genSecretButton(i, InfinityButtonsBlocks.END_STONE_BRICK_SECRET_BUTTON, Items.END_STONE_BRICKS);
+        genSecretButton(i, InfinityButtonsBlocks.PURPUR_BLOCK_SECRET_BUTTON, Items.PURPUR_BLOCK);
         genSecretButton(i, InfinityButtonsBlocks.QUARTZ_BRICK_SECRET_BUTTON, Items.QUARTZ_BRICKS);
         genSecretButton(i, InfinityButtonsBlocks.DARK_PRISMARINE_SECRET_BUTTON, Items.DARK_PRISMARINE);
         genSecretButton(i, InfinityButtonsBlocks.POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON, Items.POLISHED_BLACKSTONE_BRICKS);

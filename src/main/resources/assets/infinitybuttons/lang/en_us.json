@@ -159,6 +159,7 @@
   "block.infinitybuttons.warped_plank_secret_button": "Warped Plank Secret Button",
   "block.infinitybuttons.mud_brick_secret_button": "Mud Brick Secret Button",
   "block.infinitybuttons.end_stone_brick_secret_button": "End Stone Brick Secret Button",
+  "block.infinitybuttons.purpur_block_secret_button": "Purpur Block Secret Button",
   "block.infinitybuttons.quartz_brick_secret_button": "Quartz Brick Secret Button",
   "block.infinitybuttons.dark_prismarine_secret_button": "Dark Prismarine Secret Button",
   "block.infinitybuttons.polished_blackstone_brick_secret_button": "Polished Blackstone Brick Secret Button",
@@ -246,7 +247,7 @@
 
   "tag.item.infinitybuttons.bookshelf_secret_buttons": "Bookshelf Secret Buttons",
   "tag.item.infinitybuttons.concrete_powder_buttons": "Concrete Powder Buttons",
-  "tag.item.infinitybuttons.concrete_powder_lage_buttons": "Concrete Powder Large Buttons",
+  "tag.item.infinitybuttons.concrete_powder_large_buttons": "Concrete Powder Large Buttons",
   "tag.item.infinitybuttons.console_buttons": "Console Buttons",
   "tag.item.infinitybuttons.copper_buttons": "Copper Buttons",
   "tag.item.infinitybuttons.copper_large_buttons": "Copper Large Buttons",
@@ -257,5 +258,8 @@
   "tag.item.infinitybuttons.secret_buttons": "Secret Buttons",
   "tag.item.infinitybuttons.torch_buttons": "Torch Buttons",
   "tag.item.infinitybuttons.wooden_large_buttons": "Wooden Large Buttons",
-  "tag.item.infinitybuttons.wooden_secret_buttons": "Wooden Secret Buttons"
+  "tag.item.infinitybuttons.wooden_secret_buttons": "Wooden Secret Buttons",
+
+  "config.jade.plugin_infinitybuttons.hide_secret_buttons": "Hide Secret Buttons",
+  "config.jade.plugin_infinitybuttons.hide_torch_buttons": "Hide Torch Buttons"
 }

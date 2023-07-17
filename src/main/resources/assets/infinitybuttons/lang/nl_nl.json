@@ -159,6 +159,7 @@
   "block.infinitybuttons.warped_plank_secret_button": "Spookachtige houten planken verborgen knop",
   "block.infinitybuttons.mud_brick_secret_button": "Modderstenen verborgen knop",
   "block.infinitybuttons.end_stone_brick_secret_button": "Endblokstenen verborgen knop",
+  "block.infinitybuttons.purpur_block_secret_button": "Purpurblok verborgen knop",
   "block.infinitybuttons.quartz_brick_secret_button": "Kwartsblokstenen verborgen knop",
   "block.infinitybuttons.dark_prismarine_secret_button": "Donkerprismarienen verborgen knop",
   "block.infinitybuttons.polished_blackstone_brick_secret_button": "Gepolijst zwartstenen blokstenen verborgen knop",
@@ -246,7 +247,7 @@
 
   "tag.item.infinitybuttons.bookshelf_secret_buttons": "Boekenkast verborgen knoppen",
   "tag.item.infinitybuttons.concrete_powder_buttons": "Cementknoppen",
-  "tag.item.infinitybuttons.concrete_powder_lage_buttons": "Grote cementknoppen",
+  "tag.item.infinitybuttons.concrete_powder_large_buttons": "Grote cementknoppen",
   "tag.item.infinitybuttons.console_buttons": "Consoleknoppen",
   "tag.item.infinitybuttons.copper_buttons": "Koperen knoppen",
   "tag.item.infinitybuttons.copper_large_buttons": "Koperen grote knoppen",
@@ -257,5 +258,8 @@
   "tag.item.infinitybuttons.secret_buttons": "Verborgen knoppen",
   "tag.item.infinitybuttons.torch_buttons": "Toortsknoppen",
   "tag.item.infinitybuttons.wooden_large_buttons": "Houten grote knoppen",
-  "tag.item.infinitybuttons.wooden_secret_buttons": "Houten verborgen knoppen"
+  "tag.item.infinitybuttons.wooden_secret_buttons": "Houten verborgen knoppen",
+
+  "config.jade.plugin_infinitybuttons.hide_secret_buttons": "Verberg verborgen knoppen",
+  "config.jade.plugin_infinitybuttons.hide_torch_buttons": "Verberg fakkelknoppen"
 }

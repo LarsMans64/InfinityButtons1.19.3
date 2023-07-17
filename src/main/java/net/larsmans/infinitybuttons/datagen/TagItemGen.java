@@ -164,6 +164,7 @@ public class TagItemGen extends FabricTagProvider<Item> {
                 .add(InfinityButtonsBlocks.CRACKED_DEEPSLATE_TILE_SECRET_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.MUD_BRICK_SECRET_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.END_STONE_BRICK_SECRET_BUTTON.asItem())
+                .add(InfinityButtonsBlocks.PURPUR_BLOCK_SECRET_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.QUARTZ_BRICK_SECRET_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.DARK_PRISMARINE_SECRET_BUTTON.asItem())
                 .add(InfinityButtonsBlocks.POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON.asItem())
