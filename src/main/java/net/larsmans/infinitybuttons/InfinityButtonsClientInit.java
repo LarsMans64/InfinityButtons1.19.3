@@ -2,13 +2,18 @@ package net.larsmans.infinitybuttons;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.particle.DiamondSparkleParticle;
+import net.larsmans.infinitybuttons.particle.InfinityButtonsParticleTypes;
 import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
 
 public class InfinityButtonsClientInit implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        ParticleFactoryRegistry.getInstance().register(InfinityButtonsParticleTypes.DIAMOND_SPARKLE, DiamondSparkleParticle.Factory::new);
+
         transparent(InfinityButtonsBlocks.TORCH_BUTTON);
         transparent(InfinityButtonsBlocks.WALL_TORCH_BUTTON);
         transparent(InfinityButtonsBlocks.TORCH_LEVER);
