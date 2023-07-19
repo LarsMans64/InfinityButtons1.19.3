@@ -8,6 +8,8 @@
     {
       "id": "#infinitybuttons:wooden_secret_buttons",
       "required": false
-    }
+    },
+    "infinitybuttons:letter_button",
+    "infinitybuttons:letter_lever"
   ]
 }

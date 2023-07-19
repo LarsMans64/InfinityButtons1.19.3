@@ -277,6 +277,8 @@ public class TagBlockGen extends FabricTagProvider<Block> {
         getOrCreateTagBuilder(MINEABLE_AXE)
                 .addOptionalTag(WOODEN_LARGE_BUTTONS)
                 .addOptionalTag(WOODEN_SECRET_BUTTONS)
+                .add(InfinityButtonsBlocks.LETTER_BUTTON)
+                .add(InfinityButtonsBlocks.LETTER_LEVER)
         ;
 
         getOrCreateTagBuilder(MINEABLE_PICKAXE)
