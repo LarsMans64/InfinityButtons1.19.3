@@ -13,15 +13,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import static net.larsmans.infinitybuttons.InfinityButtonsInit.MOD_ID;
+import static net.larsmans.infinitybuttons.InfinityButtonsInit.LETTER_BUTTON_SCREEN_PACKET;
 
 public class InfinityButtonsClientInit implements ClientModInitializer {
-
-    public static final Identifier LETTER_BUTTON_SCREEN_PACKET = new Identifier(MOD_ID, "letter_button_screen");
 
     @Override
     public void onInitializeClient() {
