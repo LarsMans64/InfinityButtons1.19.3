@@ -6,6 +6,7 @@ import net.larsmans.infinitybuttons.advancement.InfinityButtonsTriggers;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButtonEnum;
+import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroups;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.item.SafeEmergencyButtonItem;
@@ -27,7 +28,7 @@ import org.slf4j.LoggerFactory;
 public class InfinityButtonsInit implements ModInitializer {
 	public static final String MOD_ID = "infinitybuttons";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final net.larsmans.infinitybuttons.config.InfinityButtonsConfig CONFIG = net.larsmans.infinitybuttons.config.InfinityButtonsConfig.createAndLoad();
+	public static final InfinityButtonsConfig CONFIG = InfinityButtonsConfig.createAndLoad();
 
 	public static final Identifier LETTER_BUTTON_BLOCK_PACKET = new Identifier(MOD_ID, "letter_button_block");
 	public static final Identifier LETTER_BUTTON_SCREEN_PACKET = new Identifier(MOD_ID, "letter_button_screen");

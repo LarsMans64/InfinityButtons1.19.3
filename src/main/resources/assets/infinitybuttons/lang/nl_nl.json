@@ -234,9 +234,9 @@
   "advancement.infinitybuttons.letter_button": "Schrijf er een brief mee!",
   "advancement.infinitybuttons.letter_button.desc": "Uit jezelf met een letterknop",
 
-  "text.config.infinity-buttons-config.option.alarmSoundMuted": "Demp alarmen",
+  "text.config.infinity-buttons-config.option.muteAlarmSound": "Demp alarmen",
   "text.config.infinity-buttons-config.option.alarmSoundType": "Alarmtype",
-  "text.config.infinity-buttons-config.option.alarmSoundType.tooltip": "De manier waarop noodknoppen alarmen kunnen maken\nBereik: Alarmen zijn hoorbaar tot een bepaalde radius\nGlobaal: Alarmen zijn overal in de wereld hoorbaar\n\n§cDit client-side veranderen doet niks op een server, het moet in de config van de server veranderd worden",
+  "text.config.infinity-buttons-config.option.alarmSoundType.tooltip": "De manier waarop noodknoppen alarmen kunnen maken\nBereik: Alarmen zijn hoorbaar tot een bepaalde radius\nGlobaal: Alarmen zijn overal in de wereld hoorbaar\n\n§cDit client-side veranderen heeft geen effect op een server,\nhet moet in de config van de server veranderd worden",
   "text.config.infinity-buttons-config.option.alarmSoundType.value.range": "Bereik",
   "text.config.infinity-buttons-config.option.alarmSoundType.value.global": "Globaal",
   "text.config.infinity-buttons-config.option.alarmSoundRange": "Alarmbereik",
