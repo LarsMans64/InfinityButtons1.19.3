@@ -31,6 +31,7 @@ public class InfinityButtonsInit implements ModInitializer {
 
 	public static final Identifier LETTER_BUTTON_BLOCK_PACKET = new Identifier(MOD_ID, "letter_button_block");
 	public static final Identifier LETTER_BUTTON_SCREEN_PACKET = new Identifier(MOD_ID, "letter_button_screen");
+	public static final Identifier ALARM_PACKET = new Identifier(MOD_ID, "alarm_packet");
 
 	@Override
 	public void onInitialize() {

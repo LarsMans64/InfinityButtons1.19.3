@@ -7,15 +7,19 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.gui.LetterButtonGui;
+import net.larsmans.infinitybuttons.config.AlarmEnum;
 import net.larsmans.infinitybuttons.particle.DiamondSparkleParticle;
 import net.larsmans.infinitybuttons.particle.InfinityButtonsParticleTypes;
+import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import static net.larsmans.infinitybuttons.InfinityButtonsInit.ALARM_PACKET;
 import static net.larsmans.infinitybuttons.InfinityButtonsInit.LETTER_BUTTON_SCREEN_PACKET;
 
 public class InfinityButtonsClientInit implements ClientModInitializer {
@@ -85,6 +89,18 @@ public class InfinityButtonsClientInit implements ClientModInitializer {
             BlockState state = world.getBlockState(pos);
             if (state.getBlock() instanceof LetterButton letterButton) {
                 client.execute(() -> MinecraftClient.getInstance().setScreen(new LetterButtonGui(letterButton, state, world, pos)));
+            }
+        });
+        ClientPlayNetworking.registerGlobalReceiver(ALARM_PACKET, (client, handler, buf, responseSender) -> {
+            if (InfinityButtonsInit.CONFIG.muteAlarmSound()) {
+                return;
+            }
+            BlockPos pos = buf.readBlockPos();
+            AlarmEnum alarmEnum = buf.readEnumConstant(AlarmEnum.class);
+            if (alarmEnum == AlarmEnum.GLOBAL) {
+                InfinityButtonsUtil.playGlobalSound(client.world, pos, InfinityButtonsSounds.ALARM, SoundCategory.BLOCKS);
+            } else {
+                client.world.playSound(client.player, pos, InfinityButtonsSounds.ALARM, SoundCategory.BLOCKS, (float) InfinityButtonsInit.CONFIG.alarmSoundRange(), 1);
             }
         });
     }
