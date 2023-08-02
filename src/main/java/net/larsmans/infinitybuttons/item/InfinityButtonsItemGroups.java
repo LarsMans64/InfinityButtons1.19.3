@@ -183,6 +183,7 @@ public class InfinityButtonsItemGroups {
                 entries.add(InfinityButtonsBlocks.WARPED_PLANK_SECRET_BUTTON);
                 entries.add(InfinityButtonsBlocks.MUD_BRICK_SECRET_BUTTON);
                 entries.add(InfinityButtonsBlocks.END_STONE_BRICK_SECRET_BUTTON);
+                entries.add(InfinityButtonsBlocks.PURPUR_BLOCK_SECRET_BUTTON);
                 entries.add(InfinityButtonsBlocks.QUARTZ_BRICK_SECRET_BUTTON);
                 entries.add(InfinityButtonsBlocks.DARK_PRISMARINE_SECRET_BUTTON);
                 entries.add(InfinityButtonsBlocks.POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON);
