@@ -2,8 +2,10 @@ package net.larsmans.infinitybuttons;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.block.custom.letterbutton.gui.LetterButtonGui;
@@ -22,14 +24,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-import static net.larsmans.infinitybuttons.InfinityButtonsInit.ALARM_PACKET;
-import static net.larsmans.infinitybuttons.InfinityButtonsInit.LETTER_BUTTON_SCREEN_PACKET;
+import static net.larsmans.infinitybuttons.InfinityButtonsInit.*;
 
 public class InfinityButtonsClientInit implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
         registerPackets();
+        registerClientEvents();
 
         ParticleFactoryRegistry.getInstance().register(InfinityButtonsParticleTypes.DIAMOND_SPARKLE, DiamondSparkleParticle.Factory::new);
 
@@ -107,6 +109,7 @@ public class InfinityButtonsClientInit implements ClientModInitializer {
                 client.world.playSound(client.player, pos, InfinityButtonsSounds.ALARM, SoundCategory.BLOCKS, (float) InfinityButtonsInit.CONFIG.alarmSoundRange(), 1);
             }
         });
+        ClientPlayNetworking.registerGlobalReceiver(JADE_PACKET, (client, handler, buf, responseSender) -> forceHidden = buf.readBoolean());
     }
 
     public static void playGlobalSound(World world, BlockPos pos, SoundEvent soundEvent, SoundCategory soundCategory) {
@@ -114,5 +117,15 @@ public class InfinityButtonsClientInit implements ClientModInitializer {
         if (cam.isReady()) {
             world.playSound(pos.getX(), pos.getY(), pos.getZ(), soundEvent, soundCategory, (float)cam.getPos().distanceTo(Vec3d.ofCenter(pos))/16.0F + 20.0F, 1.0F, false);
         }
+    }
+
+    private static boolean forceHidden = true;
+
+    public static boolean getForceHidden() {
+        return forceHidden;
+    }
+
+    public static void registerClientEvents() {
+        ClientPlayConnectionEvents.JOIN.register((clientPlayNetworkHandler, packetSender, minecraftClient) -> ClientPlayNetworking.send(REQUEST_JADE_PACKET, PacketByteBufs.create().writeString("Safety Buttons are Stylish!")));
     }
 }
