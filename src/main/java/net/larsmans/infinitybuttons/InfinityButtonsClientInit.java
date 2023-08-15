@@ -114,9 +114,10 @@ public class InfinityButtonsClientInit implements ClientModInitializer {
 
     public static void playGlobalSound(World world, BlockPos pos, SoundEvent soundEvent, SoundCategory soundCategory) {
         Camera cam = MinecraftClient.getInstance().gameRenderer.getCamera();
+        Vec3d centerPos = pos.toCenterPos();
         if (cam.isReady()) {
-            float chunkDistance = (float)cam.getPos().distanceTo(Vec3d.ofCenter(pos)) / 16.0f;
-            world.playSound(pos.getX(), pos.getY(), pos.getZ(), soundEvent, soundCategory, chunkDistance * 1.3f + 20f, 1.0f, false);
+            float chunkDistance = (float)cam.getPos().distanceTo(centerPos) / 16.0f;
+            world.playSound(centerPos.getX(), centerPos.getY(), centerPos.getZ(), soundEvent, soundCategory, chunkDistance * 1.3f + 20f, 1.0f, false);
         }
     }
 
