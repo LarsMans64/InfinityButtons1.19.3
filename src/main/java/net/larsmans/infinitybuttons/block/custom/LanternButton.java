@@ -1,7 +1,10 @@
 package net.larsmans.infinitybuttons.block.custom;
 
 import net.larsmans.infinitybuttons.InfinityButtonsUtil;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.LanternBlock;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
@@ -29,6 +32,8 @@ import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+
+import static net.larsmans.infinitybuttons.InfinityButtonsUtil.checkChains;
 
 public class LanternButton extends LanternBlock {
 
@@ -157,17 +162,10 @@ public class LanternButton extends LanternBlock {
     }
 
     public void updateNeighbors(World world, BlockPos pos) {
+        int distance = checkChains(world, pos);
         world.updateNeighborsAlways(pos, this);
-        world.updateNeighborsAlways(pos.up(checkChains(world, pos)), this);
-        world.updateNeighborsAlways(pos.up(checkChains(world, pos) + 1), this);
-    }
-
-    public int checkChains(World world, BlockPos pos) {
-        int i = 1;
-        while (world.getBlockState(pos.up(i)).getBlock() instanceof ChainBlock) {
-            i++;
-        }
-        return i - 1;
+        world.updateNeighborsAlways(pos.up(distance), this);
+        world.updateNeighborsAlways(pos.up(distance + 1), this);
     }
 
     @Override
