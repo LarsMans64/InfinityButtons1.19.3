@@ -115,8 +115,7 @@ public class InfinityButtonsUtil {
 
     public static int checkChains(World world, BlockPos pos) {
         int i = 0;
-        BlockState state;
-        while ((state = world.getBlockState(pos.up(i + 1))).getBlock() instanceof ChainBlock/* && state.get(ChainBlock.AXIS) == Direction.Axis.Y*/) {
+        while (world.getBlockState(pos.up(i + 1)).getBlock() instanceof ChainBlock) {
             i++;
         }
         return i;
