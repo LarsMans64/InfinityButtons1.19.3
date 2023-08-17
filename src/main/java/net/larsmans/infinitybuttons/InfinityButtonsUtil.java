@@ -8,11 +8,15 @@ import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyBu
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.item.SafeEmergencyButtonItem;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.ChainBlock;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.registry.Registries;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,5 +111,14 @@ public class InfinityButtonsUtil {
                 if (block instanceof SafeEmergencyButton)
                     SAFETY_BUTTONS.add((SafeEmergencyButtonItem) block.asItem());
         }
+    }
+
+    public static int checkChains(World world, BlockPos pos) {
+        int i = 0;
+        BlockState state;
+        while ((state = world.getBlockState(pos.up(i + 1))).getBlock() instanceof ChainBlock/* && state.get(ChainBlock.AXIS) == Direction.Axis.Y*/) {
+            i++;
+        }
+        return i;
     }
 }
