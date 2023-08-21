@@ -8,7 +8,6 @@ import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyBu
 import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.item.SafeEmergencyButtonItem;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.ChainBlock;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.registry.Registries;
